@@ -45,19 +45,11 @@ namespace moment_2.Controllers
 
             return View(JsonObj);
         }
-        // GET: Booking/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+
 
         // GET: Booking/Create
         public ActionResult BokaBord()
         {
-
-            // CREATE SESSION VARIBALE
-            string iKnow = "Från sessionsvariabel: Jag vet att du besökt sidan 'Boka bord' ;)";
-            HttpContext.Session.SetString("bb", iKnow);
             // READ FROM "booking.json" FILE
             var JsonStr = System.IO.File.ReadAllText("bookings.json");
             var JsonObj = JsonConvert.DeserializeObject<IEnumerable<Bookings>>(JsonStr);
@@ -68,11 +60,7 @@ namespace moment_2.Controllers
 
         public ActionResult BokaBord2()
         {
-
          
-            // CREATE SESSION VARIBALE
-            string iKnow = "Från sessionsvariabel: Jag vet att du besökt sidan 'Boka bord' ;)";
-            HttpContext.Session.SetString("bb", iKnow);
             // READ FROM "booking.json" FILE
            
                var JsonStr = System.IO.File.ReadAllText("bookings.json");
