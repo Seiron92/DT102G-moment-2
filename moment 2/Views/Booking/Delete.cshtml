@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<moment_2.Models.Bookings>
+@{
+    ViewData["Title"] = "Tack för din bokning";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Boka bord</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+    <div id="bokaBord">
+        <div id="confDel">
+            <h2>Är du säker på att du vill avboka?</h2>
+            <form asp-action="Delete" method="Post">
+                <input type="number" id="id" class="hidden" name="Id"><br>
+                <input type="submit" id="yes" class="btn" value="Ja">
+                <input id="no" class="btn" value="Nej" onclick="@("window.location.href='" + @Url.Action("BokaBord", "Booking") + "'");" />
+            </form>
+        </div>
+        <div id="bokaBord2">
+
+
+            <div id="conf2"></div>
+            <div id="conf">
+
+
+            </div>
+
+        </div>
+
+        <div id="scrollTo2"></div>
+    </div>
+
+
+    <script src="~/js/confirm.js"></script>
+    <script src="~/js/hiddenId.js"></script>

@@ -1,0 +1,46 @@
+﻿
+@model moment_2.Models.Bookings
+
+@{
+    ViewData["Title"] = "Dina bokningar";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Dina bokningar</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+    <div id="bokaBord">
+        <div id="confDel" style="display: none;">
+            <h2>Är du säker på att du vill avboka?</h2>
+            <div id="yes" class="btn">Ja</div>
+            <div id="no" class="btn">Nej</div>
+        </div>
+        
+            <h2>Dina bokningar</h2>
+            <div id="bookings2" data-aos="fade-right" class="aos-init aos-animate">
+      
+
+                <form asp-action="BokaBord2" method="POST">
+ <p>@ViewBag.error</p>
+                    <input name="Email" id="emailverification" placeholder="Ange din epostadress">
+                    <input type="submit" class="button" id="getBookings" name="submit2" value="Hämta">
+                </form>
+            </div>
+        
+        <div id="conf2"></div>
+        <div id="conf">
+
+
+        </div>
+    </div>
+
+</div>
+
+<div id="scrollTo2"></div>
+
+
+

@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<moment_2.Models.Bookings>
+@{
+    ViewData["Title"] = "Tack för din bokning";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Boka bord</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+    <div id="bokaBord">
+        <div id="bokaBord2">
+            <div id="conf">
+
+
+                @foreach (var booking in Model)
+                {
+                    if (@booking.Id == @Model.Last().Id)
+                    {
+
+                        string date = @booking.Date.ToString("yyyy-MM-dd");
+                        <div id="hide2">
+                            <h2>Din bokning är avbokad @booking.Name</h2>
+                        </div>
+                    }
+                }
+            </div>
+            }
+        </div>
+        <div id="scrollTo2"></div>
+    </div>
+    <script src="~/js/confirm.js"></script>

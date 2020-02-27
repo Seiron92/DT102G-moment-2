@@ -1,0 +1,72 @@
+﻿
+@model IEnumerable<moment_2.Models.Bookings>
+@{
+    ViewData["Title"] = "Boka Bord";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Boka bord</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+  
+        <div id="conf">
+
+            <h2>Här är dina bokningar</h2>
+            @foreach (var booking in Model)
+            {
+                     string date = @booking.Date.ToString("yyyy-MM-dd");
+                if (@booking.Email == @ViewBag.Email)
+                {
+            <div class="block">
+                <div class="dateNTime"><p>Datum: @date, klockan: @booking.Time</p></div>
+                <div class="nameNTable"><p>Bord: @booking.Table<br> Bokningsnummer: @booking.Id</p></div><br>
+                <p class="button2"> @Html.ActionLink("Avboka", "Delete", new { id = booking.Id })</p>
+                <p class="button3"> @Html.ActionLink("Uppdatera", "Edit", new { id = booking.Id })</p>
+          
+      
+                
+            </div>
+                }
+            }
+                   
+                </div>
+
+
+    <div id="update">
+        <h2 id="hideThis2">Omboka</h2>
+        <h3 id="bokno"></h3>
+        <div id="bookings3" data-aos="fade-right" class="aos-init aos-animate">
+            <form id="form2">
+                <label>Antal</label>
+                <input type="number" id="number2"><br>
+                <label>Datum</label>
+                <input type="date" id="date2">
+                <label>Tid</label>
+                <input type="time" id="time2"><br>
+                <label>Bord</label><select id="table2">
+                    <option id="tab0"></option>
+                    <option value="1" id="tab1">Bord 1</option>
+                    <option value="2" id="tab2">Bord 2</option>
+                    <option value="3" id="tab3">Bord 3</option>
+                    <option value="4" id="tab4">Bord 4</option>
+                    <option value="5" id="tab5">Bord 5</option>
+                    <option value="6" id="tab6">Bord 6</option>
+                    <option value="7" id="tab7">Bord 7</option>
+                    <option value="8" id="tab8">Bord 8</option>
+                    <option value="9" id="tab9">Bord 9</option>
+                    <option value="10" id="tab10">Bord 10</option>
+                    <option value="11" id="tab11">Bord 11</option>
+                </select>
+            </form>
+        </div>
+        <div id="submit2">Omboka</div>
+    </div>
+    <div id="scrollTo2"></div>
+</div>
+
+<script src="~/js/main.js"></script>
+<script src="~/js/confirm.js"></script>

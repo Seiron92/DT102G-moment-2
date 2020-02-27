@@ -1,0 +1,92 @@
+﻿
+@model IEnumerable<moment_2.Models.Bookings>
+@{
+    ViewData["Title"] = "Tack för din bokning";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Boka bord</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+    <div id="bokaBord">
+        <div id="confDel" style="display: none;">
+            <h2>Är du säker på att du vill avboka?</h2>
+            <div id="yes" class="btn">Ja</div>
+            <div id="no" class="btn">Nej</div>
+        </div>
+        <div id="bokaBord2">
+
+            <div id="hide">
+                <h2>Dina bokningar</h2>
+                <div id="bookings2" data-aos="fade-right" class="aos-init aos-animate">
+                    <form>
+                        <input type="email" id="emailverification" placeholder="Ange din epostadress">
+                        <div class="button" id="getBookings">Hämta</div>
+                    </form>
+                </div>
+            </div>
+            <div id="conf2"></div>
+            <div id="conf">
+
+
+                @foreach (var booking in Model)
+                {
+                    if (@booking.Id == @Model.Last().Id)
+                    {
+
+                        string date = @booking.Date.ToString("yyyy-MM-dd");
+                        <div id="hide2">
+                            <h2>Tack för din bokning @booking.Name</h2>
+                            <div id="bookings2" data-aos="fade-right">
+                                <div className="block2">
+                                    <p>
+                                        Datum: @date, klockan: @booking.Time
+                                        Bord: @booking.Table
+                                    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            }
+        </div>
+        <div id="update">
+            <h2 id="hideThis2">Omboka</h2>
+            <h3 id="bokno"></h3>
+            <div id="bookings3" data-aos="fade-right" class="aos-init aos-animate">
+                <form id="form2">
+                    <label>Antal</label>
+                    <input type="number" id="number2"><br>
+                    <label>Datum</label>
+                    <input type="date" id="date2">
+                    <label>Tid</label>
+                    <input type="time" id="time2"><br>
+                    <label>Bord</label><select id="table2">
+                        <option id="tab0"></option>
+                        <option value="1" id="tab1">Bord 1</option>
+                        <option value="2" id="tab2">Bord 2</option>
+                        <option value="3" id="tab3">Bord 3</option>
+                        <option value="4" id="tab4">Bord 4</option>
+                        <option value="5" id="tab5">Bord 5</option>
+                        <option value="6" id="tab6">Bord 6</option>
+                        <option value="7" id="tab7">Bord 7</option>
+                        <option value="8" id="tab8">Bord 8</option>
+                        <option value="9" id="tab9">Bord 9</option>
+                        <option value="10" id="tab10">Bord 10</option>
+                        <option value="11" id="tab11">Bord 11</option>
+                    </select>
+                </form>
+            </div>
+            <div id="submit2">Omboka</div>
+        </div>
+        <div id="scrollTo2"></div>
+    </div>
+
+
+    <script src="~/js/confirm.js"></script>

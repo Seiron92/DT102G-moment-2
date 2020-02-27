@@ -1,0 +1,49 @@
+﻿
+@model IEnumerable<moment_2.Models.Bookings>
+@{
+    ViewData["Title"] = "Boka Bord";
+}
+<div id="mainLogo" data-aos="fade-right" class="aos-init aos-animate">
+    <h1>Boka bord</h1>
+    <h2>
+        Löksås ipsum tid sorgliga hans samma annat lax tre det, helt trevnadens brunsås där ta fram enligt nu, om ingalunda blivit både stig bäckasiner stig
+        omfångsrik. Lax trevnadens när rännil faktor redan samtidigt olika när ännu, se stora det
+    </h2>
+</div>
+<div id="scrollTo"></div>
+<div class="secondSection">
+    <div id="update">
+        <h2 id="hideThis2">Omboka</h2>
+        <h3 id="bokno"></h3>
+        <div id="bookings3" data-aos="fade-right" class="aos-init aos-animate">
+            <form id="form2" asp-action="Edit" method="Post">
+                <input type="number" id="id" class="hidden" name="Id" ><br>
+                <label>Antal</label>
+                <input type="number" id="number2" name="Number"><br>
+                <label>Datum</label>
+                <input type="date" id="date2" name="Date">
+                <label>Tid</label>
+                <input type="time" id="time2" name="Time"><br>
+                <label>Bord</label><select name="Table" id="table2">
+                    <option id="tab0"></option>
+                    <option value="1" name="Table" id="tab1">Bord 1</option>
+                    <option value="2" name="Table" id="tab2">Bord 2</option>
+                    <option value="3" name="Table" id="tab3">Bord 3</option>
+                    <option value="4" name="Table" id="tab4">Bord 4</option>
+                    <option value="5" name="Table" id="tab5">Bord 5</option>
+                    <option value="6" name="Table" id="tab6">Bord 6</option>
+                    <option value="7" name="Table" id="tab7">Bord 7</option>
+                    <option value="8" name="Table" id="tab8">Bord 8</option>
+                    <option value="9" name="Table" id="tab9">Bord 9</option>
+                    <option value="10" name="Table" id="tab10">Bord 10</option>
+                    <option value="11" name="Table" id="tab11">Bord 11</option>
+                </select>
+                <input type="submit" id="submit2" value="Omboka">
+            </form>
+        </div>
+    </div>
+    <div id="scrollTo2"></div>
+</div>
+
+<script src="~/js/edit.js"></script>
+<script src="~/js/confirm.js"></script>
