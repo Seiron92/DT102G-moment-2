@@ -1,5 +1,4 @@
 [
-  
   {
     "Id": 4,
     "Name": "l",
@@ -11,12 +10,12 @@
   },
   {
     "Id": 5,
-    "Name": "l",
+    "Name": "Rebecca Jönsson Seiron",
     "Number": 2,
-    "Date": "2020-03-02T00:00:00",
+    "Date": "2020-02-28T00:00:00",
     "Time": "18:00",
     "Email": "rebecca.seiron@hotmail.com",
-    "Table": 8
+    "Table": 7
   },
   {
     "Id": 6,
@@ -26,5 +25,14 @@
     "Time": "18:00",
     "Email": "rebecca.seiron@hotmail.com",
     "Table": 5
+  },
+  {
+    "Id": 7,
+    "Name": "Daniel Klasson",
+    "Number": 2,
+    "Date": "2020-02-28T00:00:00",
+    "Time": "15:00",
+    "Email": "classon81@gmail.com",
+    "Table": 8
   }
 ]

@@ -22,6 +22,9 @@ namespace moment_2.Controllers
         }
         public ActionResult Rebook()
         {
+            // USE Session variable for rebook control
+            string idControl = HttpContext.Session.GetString("idcnt");
+            ViewBag.Id = idControl;
             var JsonStr = System.IO.File.ReadAllText("bookings.json");
             var JsonObj = JsonConvert.DeserializeObject<IEnumerable<Bookings>>(JsonStr);
 
@@ -34,6 +37,7 @@ namespace moment_2.Controllers
             // GET SESSION VARIABLE
             string iKnowOutPut = HttpContext.Session.GetString("bb");
             ViewBag.error = iKnowOutPut;
+
 
 
             return View();
@@ -182,11 +186,18 @@ namespace moment_2.Controllers
 
             try
             {
-
+                string idInput = collection["Id"];
                 // Get Id from hidden inputfield
                int id2 = Convert.ToInt32(collection["Id"]);
                 // Convert date input to correct datatype (DateTime)
                 string inDate = collection["Date"];
+
+
+                // SET
+          
+                HttpContext.Session.SetString("idcnt", idInput);
+
+
                 DateTime outDate = Convert.ToDateTime(inDate);
 
                 var json = System.IO.File.ReadAllText("bookings.json");

@@ -18,11 +18,12 @@
 
             <div id="conf2"></div>
             <div id="conf">
-
+                @{var output = ViewBag.Id;
+                   int control = Convert.ToInt32(output); }
 
                 @foreach (var booking in Model)
                 {
-                    if (@booking.Id == @Model.Last().Id)
+                    if (@booking.Id == control)
                     {
 
                         string date = @booking.Date.ToString("yyyy-MM-dd");
